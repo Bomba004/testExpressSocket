@@ -1,7 +1,39 @@
 {
-  "name": "node-starter",
-  "private": true,
+  "name": "testExpressSocket",
+  "version": "1.0.0",
+  "description": "API for currency conversion using real-time exchange rates.",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/server.js",
+    "dev": "nodemon --watch src --exec node ./src/server.js",
+    "test": "jest --runInBand"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^5.1.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^6.7.0",
+    "express-validator": "^6.14.3",
+    "helmet": "^6.0.0",
+    "hpp": "^0.2.3",
+    "moment": "^2.30.1",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.8.1",
+    "winston": "^3.8.2",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
   }
 }
