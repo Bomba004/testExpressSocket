@@ -1,9 +1,8 @@
-/* 
+<!--
 ** 📁 plan.md
 ** lastUpdatedAt:[{ "date": "10/09/2025", "by": ["BomBa"], "comment": "إنشاء تطبيق دردشة في الوقت الفعلي باستخدام (Node.js, Express  nodejs, Socket.io" }, video: ["https://youtu.be/pdOhh8IVs-I"]]
-*/
-
-
+-->
+<!-- 
 /app
   server(Node/Express)/
     src/
@@ -29,6 +28,7 @@
       store/
       styles/
   /infra (IaC, docker, scripts)
+ -->
 
 
 
