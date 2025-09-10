@@ -1,40 +1,43 @@
-# Express Starter Project 🚀
+<div dir="rtl">
 
-<dev align="center" dir="ltr">
-  <p>
+  <h1 dir="ltr">🚀 Express Starter Project</h1>
+
+  <p align="center">
     <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" alt="Express.js" />
     <img src="https://img.shields.io/badge/Node.js-%23404d59.svg?style=for-the-badge&logo=node.js&logoColor=%2361DAFB" alt="Node.js" />
   </p>
-
-  <p>
-    قالب بسيط ونظيف لمشاريع الـ **Back-End** باستخدام **Express.js**، **ES Modules**، و**Dotenv**.
+  <p align="center">
+    قالب بسيط ونظيف لمشاريع <b>Back-End</b> باستخدام <b>Express.js</b>، <b>ES Modules</b>، و<b>Dotenv</b>.
   </p>
-
-  <p>
+  <p align="center">
     <code>#backend</code>
     <code>#nodejs</code>
     <code>#express</code>
     <code>#starter</code>
     <code>#template</code>
   </p>
-</dev>
----
 
-### نظرة عامة على المشروع 📝
+  <hr />
 
-هذا المشروع يمثل نقطة انطلاق مثالية لتطبيقات الـ **Back-End** المبنية على **Express.js**. يتميز بهيكله البسيط والمجهز للنمو، حيث يتبع أفضل الممارسات من حيث **تنظيم الكود** و**الأمان**، مما يجعله مناسبًا للمشاريع الصغيرة والمتوسطة.
+  <h3>📝 نظرة عامة على المشروع</h3>
+  <p>
+    هذا المشروع يمثل نقطة انطلاق مثالية لتطبيقات الـ <b>Back-End</b> المبنية على <b>Express.js</b>.
+    يتميز بهيكله البسيط والمجهز للنمو، حيث يتبع أفضل الممارسات من حيث <b>تنظيم الكود</b> و<b>الأمان</b>،
+    مما يجعله مناسبًا للمشاريع الصغيرة والمتوسطة.
+  </p>
 
-### الميزات 🌟
+  <h3>🌟 الميزات</h3>
+  <ul>
+    <li><b>هيكل مبسط:</b> جاهز للبدء فورًا.</li>
+    <li><b>إدارة البيئة:</b> استخدام <code>dotenv</code> لإدارة متغيرات البيئة.</li>
+    <li><b>أمان مدمج:</b> يتضمن <b>middlewares</b> أساسية للحماية مثل <b>Helmet</b>, <b>CORS</b>, و <b>Rate Limiting</b>.</li>
+    <li><b>ES Modules:</b> الكود مكتوب بـ <code>type: "module"</code> للحداثة والمرونة.</li>
+  </ul>
 
-* **هيكل مبسط:** جاهز للبدء فورًا.
-* **إدارة البيئة:** استخدام `dotenv` لإدارة متغيرات البيئة.
-* **أمان مدمج:** يتضمن **middlewares** أساسية للحماية مثل **Helmet**, **CORS**, و **Rate Limiting**.
-* **ES Modules:** الكود مكتوب بـ `type: "module"` للحداثة والمرونة.
+  <hr />
 
----
-
-### 📂 هيكل المشروع
-```
+  <h3>📂 هيكل المشروع</h3>
+  <pre align="left">
 server(Node/Express)/
 |── node_modules/
 |── public/
@@ -45,47 +48,44 @@ server(Node/Express)/
 |── .env
 |── package.json
 └── README.md
-```
+  </pre>
 
----
+  <hr />
 
-### ⚙️ تثبيت الحزم و تشغيل السيرفر <!-- التسبيت -->
-```js
+  <h3>⚙️ تثبيت الحزم و تشغيل السيرفر</h3>
+<pre align="left">
 // 1- استنسخ المستودع إلى دليل مشاريعك:
-git clone `https://github.com/Bomba004/testExpressSocket`
+git clone https://github.com/Bomba004/testExpressSocket
 
 // 2- انتقل إلى مجلد التطبيقات:
 cd testExpressSocket
 
-// 3- افتحه في محرر الأكواد، ثم افتحه باستخدام الخادم المباشر:
+// 3- افتحه في محرر الأكواد:
 code .
 
-// 4- ثبّت التبعيات داخل مجلد المشروع:
+// 4- ثبّت التبعيات وشغّل السيرفر:
 yarn install && yarn start
 // ⚡ أو إذا كنت تستخدم npm:
 npm install && npm start
-```
+  </pre>
 
-📝 ملف البيئة .env:
-
-قم بإنشاء ملف .env في جذر المشروع وأضف المتغيرات مثل:
-```
+  <h3>📝 ملف البيئة .env</h3>
+  <pre align="left">
 PORT=4000
-```
+  </pre>
 
-📜 الكود الأساسي (server.js)
-```js
+  <h3>📜 الكود الأساسي (server.js)</h3>
+  <pre align="left">
 import 'dotenv/config';
 import express from 'express';
+
 express().listen(process.env.PORT ?? 3000, () =>
   console.log(`✅ Server running on http://localhost:${process.env.PORT ?? 3000}`)
 );
-```
+  </pre>
 
-🔒 تحسينات أمان مقترحة
-
-للاستخدام في الإنتاج يفضل إضافة بعض الـ middlewares:
-```js
+  <h3>🔒 تحسينات أمان مقترحة</h3>
+  <pre align="left">
 import helmet from 'helmet';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
@@ -95,45 +95,25 @@ const app = express();
 app.use(helmet()); // حماية الـ headers
 app.use(cors());   // تفعيل CORS بشكل صحيح
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 })); // منع هجمات brute-force
-```
+  </pre>
 
----
+  <hr />
 
-## 📌 ملاحظات
+  <h3>📌 ملاحظات</h3>
+  <ul>
+    <li>الكود الحالي مناسب للبدايات والمشاريع الصغيرة.</li>
+    <li>للمشاريع الكبيرة، يُنصح بعمل بنية ملفات منظمة (<code>app.js</code>, <code>routes</code>, <code>middlewares</code>, <code>config</code>).</li>
+    <li>يفضل إضافة <b>logger</b> مثل <code>winston</code> أو <code>pino</code> بدل <code>console.log</code> للإنتاج.</li>
+  </ul>
 
-- الكود الحالي مناسب للبدايات والمشاريع الصغيرة.
+  <br />
+  <hr />
 
-- للمشاريع الكبيرة، يُنصح بعمل بنية ملفات منظمة (app.js, routes, middlewares, config).
+  <h3 align="left">📄 License</h3>
+  <p align="left">
+    The License (<a href="https://bomba004.github.io/BomBa/" target="_blank">BOMBA</a>)<br />
+    Copyright (c) 2021 
+    <a href="https://bomba004.github.io/CV-Hussein/" target="_blank">Hussein Abdo</a>
+  </p>
 
-- يفضل إضافة logger مثل winston أو pino بدل console.log للإنتاج.
-
----
-
-
-## Description 📝
-
-<pre style="
-  font-size:70%;
-  font-weight:700;
-  color: #fff;
-  background-color: #393;
-  padding: 0.5em;
-  border-radius: 0.5em;
-  box-shadow: inset 0 0 0.25em #fff;
-  overflow: auto;
-" dir="rtl">
-</pre>
-
-<!-- ## Author                            الإستخدام -->
-<!-- [Hussein Abdo](https://bomba004.github.io/CV-Hussein/)
-<a href="https://bomba004.github.io/CV-Hussein/" target="_blank">Hussein Abdo</a>
- -->
-
-<!-- ## Usage 💻                         الإستخدام -->
-<!-- ## Contributing 🤝                  المساهمة -->
-
-## License ©️ <!-- الرخصة -->
-
-The License ([BOMBA](https://bomba004.github.io/BomBa/))
-
-Copyright (c) 2021 [Hussein Abdo](https://bomba004.github.io/CV-Hussein/)
+</div>
